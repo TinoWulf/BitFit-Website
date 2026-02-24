@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <meta name="description" content="Bitfit - Premium Online Coaching">
+    <title>BitFit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaquarry.css">
+    <link rel="icon" type="image/png" href="assets/img/bitfit-logo.PNG">
+</head>
+<body>
+    <nav class="nav" aria-label="Main Navigation">
+        <div class="container nav-inner">
+            <a href="#hero" class="brand">
+                <img src="assets/img/bitfit-logo.PNG" alt="Bitfit Logo" class="brand-logo">
+            </a>
+            <div class="language-toggle" id="language-toggle">
+                <button class="lang-btn lang-en active" data-lang="en">EN</button>
+                <button class="lang-btn lang-de" data-lang="de">DE</button>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="#pricing" class="btn btn-primary">Start Now</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">
+                <img src="assets/img/menu-icon.png" alt="">
+            </button>
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="#pricing" class="btn btn-primary btn-primary-mobile">Start Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-inner">
+            <p class="eyebrow">Premium Fitness Coaching</p>
+            <h1>Upgrade Your Body.<br><span class="accent">Optimize Your Performance.</span></h1>
+            <p>Structured personal coaching programs designed for those who demand measurable results. Data-driven. Science-backed. Results-guaranteed.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#pricing">Start Now <img class="btn-icon" src="assets/img/black-arrow.png" alt=""></a>
+                <a class="btn btn-secondary" href="#pricing">View Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <p>Why Choose Me</p>
+                <h2>Built for <span class="accent">Results</span></h2>
+            </div>
+            <div class="features">
+                <article class="card" data-card="card-1">
+                    <img class="card-icon" src="assets/img/plans.png" alt="">
+                    <h3>Personalized Plans</h3>
+                    <p>Custom training programs tailored to your goals, fitness level, and schedule.</p>
+                </article>
+                <article class="card" data-card="card-2">
+                    <img class="card-icon" src="assets/img/coach.png" alt="">
+                    <h3>Direct Coach Support</h3>
+                    <p>Real-time access to professional trainers who guide your every step.</p>
+                </article>
+                <article class="card" data-card="card-3">
+                    <img class="card-icon" src="assets/img/tracking.png" alt="">
+                    <h3>Progress Tracking</h3>
+                    <p>Data-driven insights with detailed analytics on your transformation journey.</p>
+                </article>
+                <article class="card" data-card="card-4">
+                    <img class="card-icon" src="assets/img/performance.png" alt="">
+                    <h3>Performance Optimization</h3>
+                    <p>Advanced techniques to maximize results and break through plateaus.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section pricing-wrap">
+        <div class="container">
+            <div class="section-title">
+                <p>Pricing Plans</p>
+                <h2>Choose Your <span class="accent">Level</span></h2>
+            </div>
+            <div class="pricing">
+                <article class="pricing-card">
+                    <h3>Underdog</h3>
+                    <p class="sub">Perfect for beginners starting their fitness journey</p>
+                    <div class="price-row"><span class="price">€49</span> <span>/month</span></div>
+                    <ul class="list">
+                        <li>Basic training plan</li><li>Email support</li><li>Monthly progress check</li><li>Community access</li><li>Workout library</li>
+                    </ul>
+                    <a href=" https://buy.stripe.com/cNi4gz5UFgrv6qe7EiejK00" target="_blank" class="btn btn-primary btn-text-white">Buy Now <img class="btn-icon btn-arrow-white" src="assets/img/white-arrow.png" alt=""></a>
+                </article>
+                <article class="pricing-card featured">
+                    <span class="badge">Most Popular</span>
+                    <h3>Gladiator</h3>
+                    <p class="sub">Our most popular package for serious athletes</p>
+                    <div class="price-row"><span class="price">€99</span> <span>/month</span></div>
+                    <ul class="list">
+                        <li>Personalized training plan</li><li>Nutrition guidance</li><li>Weekly check-ins</li><li>Priority support</li><li>Video form analysis</li><li>Supplement recommendations</li>
+                    </ul>
+                    <a href=" https://buy.stripe.com/3cIbJ16YJfnr7ui3o2ejK01" target="_blank" class="btn btn-primary">Buy Now <img class="btn-icon" src="assets/img/black-arrow.png" alt=""></a>
+                </article>
+                <article class="pricing-card">
+                    <h3>Terminator</h3>
+                    <p class="sub">Elite coaching for maximum transformation</p>
+                    <div class="price-row"><span class="price">€199</span> <span>/month</span></div>
+                    <ul class="list">
+                        <li>Fully personalized coaching</li><li>Daily 1:1 support</li><li>Custom nutrition plan</li><li>Performance optimization</li><li>Video feedback sessions</li><li>24/7 messaging access</li><li>Quarterly strategy calls</li>
+                    </ul>
+                    <a href=" https://buy.stripe.com/28E00j3Mx6QVbKybUyejK02" target="_blank" class="btn btn-primary btn-text-white">Buy Now <img class="btn-icon btn-arrow-white" src="assets/img/white-arrow.png" alt=""></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <div class="section-title">
+                <p>The Process</p>
+                <h2>How It <span class="accent">Works</span></h2>
+            </div>
+            <div class="steps">
+                <article class="step"><div class="step-num">01</div><h3>Choose Your Plan</h3><p>Select the coaching package that aligns with your goals and commitment level.</p></article>
+                <article class="step"><div class="step-num">02</div><h3>Get Your Program</h3><p>Receive your personalized training and nutrition plan tailored to your body and goals.</p></article>
+                <article class="step"><div class="step-num">03</div><h3>Track &amp; Transform</h3><p>Execute the plan, track your progress, and watch your transformation unfold.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials-wrap">
+        <div class="container">
+            <div class="section-title">
+                <p>Success Stories</p>
+                <h2>Real <span class="accent">Results</span></h2>
+            </div>
+            <div class="testimonials">
+                <article class="testimonial">
+                    <img class="testimonial-text-img" src="assets/img/text.png" alt="">
+                    <p>"Bitfit completely transformed my approach to fitness. The personalized coaching and data-driven insights helped me achieve results I never thought possible."</p>
+                    <div class="person"><img class="avatar" src="https://images.unsplash.com/photo-1544972917-3529b113a469?q=80&w=400&auto=format&fit=crop" alt="Marcus K."><div><strong>Marcus K.</strong><div class="result">Lost 25kg in 6 months</div></div></div>
+                    <img class="testimonial-stars" src="assets/img/stars.png" alt="Five stars">
+                </article>
+                <article class="testimonial">
+                    <img class="testimonial-text-img" src="assets/img/text.png" alt="">
+                    <p>"The Gladiator program pushed me beyond my limits. Weekly check-ins kept me accountable, and the nutrition guidance was a game-changer for my performance."</p>
+                    <div class="person"><img class="avatar" src="https://images.pexels.com/photos/3912944/pexels-photo-3912944.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Elena S."><div><strong>Elena S.</strong><div class="result">Gained 8kg muscle</div></div></div>
+                    <img class="testimonial-stars" src="assets/img/stars.png" alt="Five stars">
+                </article>
+                <article class="testimonial">
+                    <img class="testimonial-text-img" src="assets/img/text.png" alt="">
+                    <p>"From couch to marathon. The structured approach and constant support made all the difference. Bitfit isn't just coaching—it's a complete lifestyle upgrade."</p>
+                    <div class="person"><img class="avatar" src="https://images.pexels.com/photos/6767251/pexels-photo-6767251.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Thomas R."><div><strong>Thomas R.</strong><div class="result">Marathon ready in 4 months</div></div></div>
+                    <img class="testimonial-stars" src="assets/img/stars.png" alt="Five stars">
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <p class="eyebrow mb-16">Get In Touch</p>
+                    <h2 class="contact-title">Ready to <span class="accent">Start?</span></h2>
+                    <p class="lead">Have questions about our programs? Want to discuss which plan is right for you? Drop us a message and our team will get back to you within 24 hours.</p>
+                    <p class="text-secondary response-note">Response within 24 hours</p>
+                    <div class="form-status" id="contact-status" role="status" aria-live="polite"></div>
+                </div>
+                <form class="form" action="contact.php" method="post" id="contact-form">
+                    <input class="input" type="text" name="name" placeholder="Your Name" required>
+                    <input class="input" type="email" name="email" placeholder="Your Email" required>
+                    <textarea class="input" rows="4" name="message" placeholder="Tell us about your fitness goals..." required></textarea>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container cta-inner">
+            <h2>Ready to <span class="accent">Transform?</span></h2>
+            <p>Join athletes who have already upgraded their performance with Bitfit. Your transformation starts with a single decision.</p>
+            <a href="#pricing" class="btn btn-primary">Get Started Today <img class="btn-icon" src="assets/img/black-arrow.png" alt=""></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <a href="#hero" class="brand"><img src="assets/img/bitfit-logo.PNG" alt="Bitfit Logo" class="footer-logo"></a>
+            <p class="muted">© 2025 Bitfit. All rights reserved. Built for performance.</p>
+            <div class="footer-links">
+                <a class="muted" href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+                <a class="muted" href="impressum.html" target="_blank" rel="noopener noreferrer">Legal Notice</a>
+            </div>
+        </div>
+    </footer>
+    <script src="translations.js"></script>
+    <script src="legal-templates.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
