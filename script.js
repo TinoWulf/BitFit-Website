@@ -17,10 +17,6 @@ function changeLanguage(lang) {
     }
   });
 
-  const navPrimaryBtn = document.querySelector('.nav-links .btn');
-  if (navPrimaryBtn) {
-    navPrimaryBtn.textContent = t.nav.startNow + ' ';
-  }
 
   const mobileMenu = document.querySelector('.mobile-menu');
   if (mobileMenu) {
@@ -41,10 +37,9 @@ function changeLanguage(lang) {
     h1.innerHTML = t.hero.h1 + '<br><span class="accent">' + t.hero.accent + '</span>';
     document.querySelector('.hero .hero-inner h1 + p').textContent = t.hero.description;
     document.querySelector('.hero-actions .btn-primary').innerHTML = t.hero.startNow + ' <img class="btn-icon" src="assets/img/black-arrow.png" alt="">';
-    document.querySelector('.hero-actions .btn-secondary').textContent = t.hero.viewPlans;
 
     // About section
-    document.querySelector('#about .section-title p').textContent = 'Why Choose Me';
+    document.querySelector('#about .section-title p').textContent = 'I Make The Difference';
     const aboutH2 = document.querySelector('#about .section-title h2');
     aboutH2.innerHTML = t.about.title + ' <span class="accent">' + t.about.accent + '</span>';
     document.querySelectorAll('#about .card').forEach((card, i) => {
@@ -124,10 +119,6 @@ function changeLanguage(lang) {
     document.querySelector('textarea[name="message"]').placeholder = t.contact.message;
     document.querySelector('#contact-form .btn').textContent = t.contact.submit;
 
-    // CTA section
-    document.querySelector('.cta h2').innerHTML = t.cta.h2.replace('Transform', '<span class="accent">Transform</span>').replace('?', '</span>?');
-    document.querySelector('.cta .cta-inner p').textContent = t.cta.p;
-    document.querySelector('.cta .btn').innerHTML = t.cta.btn + ' <img class="btn-icon" src="assets/img/black-arrow.png" alt="">';
   }
 
   // Footer
