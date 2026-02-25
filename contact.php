@@ -1,5 +1,5 @@
 <?php
-$to = 'wulf.tino.gz@gmail.com';
+$to = 'info@bitfit.club';
 $subject = 'Bitfit Contact Form';
 
 $name = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING) ?? '');

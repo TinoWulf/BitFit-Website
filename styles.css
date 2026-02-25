@@ -27,6 +27,10 @@ body {
     overflow-x: hidden;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3 {
@@ -266,6 +270,76 @@ h3 {
 .btn-secondary:hover {
     background: #fff;
     color: #000;
+}
+
+.purchase-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.purchase-modal.is-open {
+    display: flex;
+}
+
+.purchase-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.purchase-modal__dialog {
+    position: relative;
+    width: min(520px, 100%);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    padding: 32px;
+    z-index: 1;
+}
+
+.purchase-modal__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border-default);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.purchase-modal__close:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.purchase-modal__dialog h3 {
+    font-size: 2rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.purchase-modal__subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.purchase-modal__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.purchase-modal__actions .btn {
+    flex: 1 1 180px;
 }
 
 .hero {

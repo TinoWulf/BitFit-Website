@@ -11,7 +11,7 @@ function changeLanguage(lang) {
 
   // Update nav links
   document.querySelectorAll('.nav-links a').forEach((link, index) => {
-    const keys = ['about', 'pricing', 'how-it-works', 'testimonials', 'contact'];
+    const keys = ['x', 'instagram', 'nostr', 'about', 'contact'];
     if (index < keys.length) {
       link.textContent = t.nav[keys[index]];
     }
@@ -21,10 +21,10 @@ function changeLanguage(lang) {
   const mobileMenu = document.querySelector('.mobile-menu');
   if (mobileMenu) {
     const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    if (mobileMenuLinks[0]) mobileMenuLinks[0].textContent = t.nav.about;
-    if (mobileMenuLinks[1]) mobileMenuLinks[1].textContent = t.nav.pricing;
-    if (mobileMenuLinks[2]) mobileMenuLinks[2].textContent = t.nav['how-it-works'];
-    if (mobileMenuLinks[3]) mobileMenuLinks[3].textContent = t.nav.testimonials;
+    if (mobileMenuLinks[0]) mobileMenuLinks[0].textContent = t.nav.instagram;
+    if (mobileMenuLinks[1]) mobileMenuLinks[1].textContent = t.nav.x;
+    if (mobileMenuLinks[2]) mobileMenuLinks[2].textContent = t.nav.nostr;
+    if (mobileMenuLinks[3]) mobileMenuLinks[3].textContent = t.nav.about;
     if (mobileMenuLinks[4]) mobileMenuLinks[4].textContent = t.nav.contact;
   }
 
@@ -157,6 +157,39 @@ function changeLanguage(lang) {
   if (policySubtitle) {
     policySubtitle.textContent = currentLanguage === 'en' ? 'Legal' : 'Rechtliches';
   }
+
+  const contactStatus = document.querySelector('#contact-status');
+  if (contactStatus) {
+    const statusKey = contactStatus.dataset.statusKey;
+    const statusMessages = t.messages || translations.en.messages;
+
+    if (statusKey && statusMessages[statusKey]) {
+      contactStatus.textContent = statusMessages[statusKey];
+      contactStatus.classList.add('is-visible');
+    }
+  }
+
+  const purchaseModalTitle = document.querySelector('#purchase-modal-title');
+  const purchaseModalSubtitle = document.querySelector('.purchase-modal__subtitle');
+  const purchaseBtcPay = document.querySelector('#purchase-btcpay');
+  const purchaseStandard = document.querySelector('#purchase-standard');
+  const purchaseModalTranslations = t.purchaseModal || translations.en.purchaseModal;
+
+  if (purchaseModalTitle && purchaseModalTranslations) {
+    purchaseModalTitle.textContent = purchaseModalTranslations.title;
+  }
+
+  if (purchaseModalSubtitle && purchaseModalTranslations) {
+    purchaseModalSubtitle.textContent = purchaseModalTranslations.subtitle;
+  }
+
+  if (purchaseBtcPay && purchaseModalTranslations) {
+    purchaseBtcPay.textContent = purchaseModalTranslations.btcpay;
+  }
+
+  if (purchaseStandard && purchaseModalTranslations) {
+    purchaseStandard.textContent = purchaseModalTranslations.standard;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -187,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutCards = document.querySelectorAll('#about .card');
   const pricingSection = document.querySelector('#pricing');
   const aboutVideoSources = {
-    'card-1': ['assets/videos/back-rotation-training.mov', 'assets/videos/pull-training.mov'],
+    'card-1': ['assets/videos/explanation1.mov', 'assets/videos/explanation2.mov'],
     'card-2': ['assets/videos/explanation.mov', 'assets/videos/double-session.mov'],
     'card-3': ['assets/videos/flex-arms.mov', 'assets/videos/nauris-flex.mov'],
     'card-4': ['assets/videos/push-training.mov', 'assets/videos/back-training.mov', 'assets/videos/facepull-training.mov']
@@ -318,15 +351,76 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const status = params.get('contact');
 
-    const messages = {
-      success: 'Wir haben deine Nachricht erhalten und melden uns in Kuerze.',
-      invalid: 'Bitte pruefe deine Eingaben und versuche es erneut.',
-      error: 'Der Versand hat leider nicht funktioniert. Bitte versuche es spaeter erneut.'
-    };
+    const statusMessages = translations[currentLanguage].messages || translations.en.messages;
 
-    if (status && messages[status]) {
-      contactStatus.textContent = messages[status];
+    if (status && statusMessages[status]) {
+      contactStatus.dataset.statusKey = status;
+      contactStatus.textContent = statusMessages[status];
       contactStatus.classList.add('is-visible');
     }
   }
+
+  const purchaseModal = document.getElementById('purchase-modal');
+  const purchaseStandard = document.getElementById('purchase-standard');
+  const purchaseBtcPay = document.getElementById('purchase-btcpay');
+  const purchaseModalClose = document.getElementById('purchase-modal-close');
+  const purchaseModalOverlay = purchaseModal ? purchaseModal.querySelector('[data-close-purchase-modal]') : null;
+
+  const btcpayPlanLinks = {
+    underdog: 'btcpay-checkout.php?plan=underdog',
+    gladiator: 'btcpay-checkout.php?plan=gladiator',
+    terminator: 'btcpay-checkout.php?plan=terminator'
+  };
+
+  const closePurchaseModal = () => {
+    if (!purchaseModal) {
+      return;
+    }
+
+    purchaseModal.classList.remove('is-open');
+    purchaseModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+
+  const openPurchaseModal = (standardUrl, btcpayUrl) => {
+    if (!purchaseModal || !purchaseStandard || !purchaseBtcPay) {
+      return;
+    }
+
+    purchaseStandard.setAttribute('href', standardUrl);
+    purchaseBtcPay.setAttribute('href', btcpayUrl);
+
+    purchaseModal.classList.add('is-open');
+    purchaseModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  };
+
+  document.querySelectorAll('.pricing-card .btn').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const plan = button.dataset.plan;
+      const standardUrl = (button.getAttribute('href') || '').trim();
+      const btcpayUrl = btcpayPlanLinks[plan];
+
+      if (!plan || !standardUrl || !btcpayUrl) {
+        return;
+      }
+
+      event.preventDefault();
+      openPurchaseModal(standardUrl, btcpayUrl);
+    });
+  });
+
+  if (purchaseModalClose) {
+    purchaseModalClose.addEventListener('click', closePurchaseModal);
+  }
+
+  if (purchaseModalOverlay) {
+    purchaseModalOverlay.addEventListener('click', closePurchaseModal);
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closePurchaseModal();
+    }
+  });
 });

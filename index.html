@@ -24,21 +24,21 @@
                 <button class="lang-btn lang-de" data-lang="de">DE</button>
             </div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
+                <a href="https://x.com/bitfitclub" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.instagram.com/bitfit.club/" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://njump.me/npub1z843vz9873qrfs4etwkmhqahpra28jg54p3drryh9umx9eem4vlqjskmvf" target="_blank" rel="noopener noreferrer"></a>
+                <a href="#about"></a>
+                <a href="#contact"></a>
             </div>
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">
                 <img src="assets/img/menu-icon.png" alt="">
             </button>
             <div class="mobile-menu" id="mobile-menu">
-                <a href="#about">About</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
+                <a href="https://x.com/bitfitclub" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.instagram.com/bitfit.club/" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://njump.me/npub1z843vz9873qrfs4etwkmhqahpra28jg54p3drryh9umx9eem4vlqjskmvf" target="_blank" rel="noopener noreferrer"></a>
+                <a href="#about"></a>
+                <a href="#contact"></a>
             </div>
         </div>
     </nav>
@@ -100,7 +100,7 @@
                     <ul class="list">
                         <li>Custom Training Plan</li><li>Basic Progress Tracking</li><li>BitFit Community Access</li>
                     </ul>
-                    <a href=" https://buy.stripe.com/cNi4gz5UFgrv6qe7EiejK00" target="_blank" class="btn btn-primary btn-text-white">Buy Now <img class="btn-icon btn-arrow-white" src="assets/img/white-arrow.png" alt=""></a>
+                    <a href=" https://buy.stripe.com/cNi4gz5UFgrv6qe7EiejK00" target="_blank" class="btn btn-primary btn-text-white" data-plan="underdog">Buy Now <img class="btn-icon btn-arrow-white" src="assets/img/white-arrow.png" alt=""></a>
                 </article>
                 <article class="pricing-card featured">
                     <span class="badge">Most Popular</span>
@@ -110,7 +110,7 @@
                     <ul class="list">
                         <li>Custom Training Plan</li><li>Nutrition Guidance</li><li>Direct Chat Support</li><li>BitFit Community Access</li>
                     </ul>
-                    <a href=" https://buy.stripe.com/3cIbJ16YJfnr7ui3o2ejK01" target="_blank" class="btn btn-primary">Buy Now <img class="btn-icon" src="assets/img/black-arrow.png" alt=""></a>
+                    <a href=" https://buy.stripe.com/3cIbJ16YJfnr7ui3o2ejK01" target="_blank" class="btn btn-primary" data-plan="gladiator">Buy Now <img class="btn-icon" src="assets/img/black-arrow.png" alt=""></a>
                 </article>
                 <article class="pricing-card">
                     <span class="badge">Limited Spots</span>
@@ -120,11 +120,24 @@
                     <ul class="list">
                         <li>All Gladiator Benefits</li><li>Complete Nutrition Plan</li><li>2x Weekly Gym Sessions</li><li>Priority Support</li>
                     </ul>
-                    <a href=" https://buy.stripe.com/28E00j3Mx6QVbKybUyejK02" target="_blank" class="btn btn-primary btn-text-white">Buy Now <img class="btn-icon btn-arrow-white" src="assets/img/white-arrow.png" alt=""></a>
+                    <a href=" https://buy.stripe.com/28E00j3Mx6QVbKybUyejK02" target="_blank" class="btn btn-primary btn-text-white" data-plan="terminator">Buy Now <img class="btn-icon btn-arrow-white" src="assets/img/white-arrow.png" alt=""></a>
                 </article>
             </div>
         </div>
     </section>
+
+    <div class="purchase-modal" id="purchase-modal" aria-hidden="true">
+        <div class="purchase-modal__overlay" data-close-purchase-modal></div>
+        <div class="purchase-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="purchase-modal-title">
+            <button class="purchase-modal__close" type="button" id="purchase-modal-close" aria-label="Close">×</button>
+            <h3 id="purchase-modal-title">Choose payment method</h3>
+            <p class="purchase-modal__subtitle">Select how you want to complete your purchase.</p>
+            <div class="purchase-modal__actions">
+                <a class="btn btn-primary" id="purchase-btcpay" href="#" target="_blank" rel="noopener noreferrer">BTCPay</a>
+                <a class="btn btn-secondary" id="purchase-standard" href="#" target="_blank" rel="noopener noreferrer">Standard</a>
+            </div>
+        </div>
+    </div>
 
     <section id="how-it-works" class="section">
         <div class="container">

@@ -2,10 +2,10 @@
 const translations = {
   en: {
     nav: {
+      x: "X",
+      instagram: "Instagram",
+      nostr: "Nostr",
       about: "About",
-      pricing: "Pricing",
-      "how-it-works": "How It Works",
-      testimonials: "Testimonials",
       contact: "Contact",
       privacy: "Privacy",
       legal: "Legal Notice"
@@ -61,15 +61,26 @@ const translations = {
       privacy: "Privacy",
       legal: "Legal Notice"
     },
+    messages: {
+      success: "We received your message and will get back to you shortly.",
+      invalid: "Please check your input and try again.",
+      error: "Sending failed. Please try again later."
+    },
+    purchaseModal: {
+      title: "Choose payment method",
+      subtitle: "Select how you want to complete your purchase.",
+      btcpay: "BTCPay",
+      standard: "Standard"
+    },
     privacy: "",
     imprint: ""
   },
   de: {
     nav: {
-      about: "Über mich",
-      pricing: "Preise",
-      "how-it-works": "So funktioniert es",
-      testimonials: "Erfolgsgeschichten",
+      x: "X",
+      instagram: "Instagram",
+      nostr: "Nostr",
+      about: "About",
       contact: "Kontakt",
       privacy: "Datenschutz",
       legal: "Impressum"
@@ -124,6 +135,17 @@ const translations = {
       copyright: "© 2025 Bitfit. Alle Rechte vorbehalten. Gebaut für Leistung.",
       privacy: "Datenschutz",
       legal: "Impressum"
+    },
+    messages: {
+      success: "Wir haben deine Nachricht erhalten und melden uns in Kürze.",
+      invalid: "Bitte prüfe deine Eingaben und versuche es erneut.",
+      error: "Der Versand hat leider nicht funktioniert. Bitte versuche es später erneut."
+    },
+    purchaseModal: {
+      title: "Zahlungsmethode wählen",
+      subtitle: "Wähle, wie du deinen Kauf abschließen möchtest.",
+      btcpay: "BTCPay",
+      standard: "Standard"
     },
     privacy: "",
     imprint: ""
