@@ -48,7 +48,8 @@ const translations = {
     },
     contact: {
       eyebrow: "Get In Touch",
-      h2: "Ready to Start?",
+      title: "Ready to",
+      accent: "Start?",
       p: "Have questions about our programs? Want to discuss which plan is right for you? Drop us a message and our team will get back to you within 24 hours.",
       response: "Response within 24 hours",
       name: "Your Name",
@@ -118,12 +119,13 @@ const translations = {
       title: "Echte",
       accent: "Ergebnisse",
       testimonial1: { text: "Bitfit hat meine Herangehensweise an Fitness komplett verändert. Das personalisierte Coaching und die datengesteuerten Einblicke halfen mir, Ergebnisse zu erreichen, die ich nie für möglich hielt.", name: "Marcus K.", result: "25kg in 6 Monaten verloren" },
-      testimonial2: { text: "Das Gladiator-Programm hat mich über meine Grenzen hinaus gepusht. Die wöchentlichen Check-ins hielten mich verantwortlich, und die Ernährungsberatung war ein Game-Changer für meine Leistung.", name: "Elena S.", result: "8kg Muskeln aufgebaut" },
+      testimonial2: { text: "Das Gladiator-Programm hat mich über meine Grenzen hinaus gepusht. Die wöchentlichen Check-ins hielten mich verantwortlich, und die Ernährungsberatung war ein Game-Changer für meine Leistung.", name: "Sören S.", result: "8kg Muskeln aufgebaut" },
       testimonial3: { text: "Vom Sofa zum Marathon. Der strukturierte Ansatz und die ständige Unterstützung machten den Unterschied. Bitfit ist nicht nur Coaching—es ist ein komplettes Lifestyle-Upgrade.", name: "Thomas R.", result: "Marathonreif in 4 Monaten" }
     },
     contact: {
-      eyebrow: "Kontaktiere mich",
-      h2: "Bereit zu Starten?",
+      eyebrow: "Get In Touch",
+      title: "Bereit zu",
+      accent: "Starten?",
       p: "Hast du Fragen zu unseren Programmen? Möchtest du besprechen, welcher Plan zu dir passt? Sende uns eine Nachricht und unser Team antwortet dir innerhalb von 24 Stunden.",
       response: "Antwort innerhalb von 24 Stunden",
       name: "Dein Name",

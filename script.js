@@ -21,8 +21,8 @@ function changeLanguage(lang) {
   const mobileMenu = document.querySelector('.mobile-menu');
   if (mobileMenu) {
     const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    if (mobileMenuLinks[0]) mobileMenuLinks[0].textContent = t.nav.instagram;
-    if (mobileMenuLinks[1]) mobileMenuLinks[1].textContent = t.nav.x;
+    if (mobileMenuLinks[0]) mobileMenuLinks[0].textContent = t.nav.x;
+    if (mobileMenuLinks[1]) mobileMenuLinks[1].textContent = t.nav.instagram;
     if (mobileMenuLinks[2]) mobileMenuLinks[2].textContent = t.nav.nostr;
     if (mobileMenuLinks[3]) mobileMenuLinks[3].textContent = t.nav.about;
     if (mobileMenuLinks[4]) mobileMenuLinks[4].textContent = t.nav.contact;
@@ -110,8 +110,12 @@ function changeLanguage(lang) {
     testimonials[2].querySelector('.result').textContent = t.testimonials.testimonial3.result;
 
     // Contact section
-    document.querySelector('#contact .eyebrow').textContent = t.contact.eyebrow;
-    document.querySelector('#contact .contact-title').innerHTML = t.contact.h2.replace('Start', '<span class="accent">Start</span>').replace('?', '</span>?');
+    const contactEyebrow = document.querySelector('#contact .eyebrow');
+    if (contactEyebrow && t.contact.eyebrow) {
+      contactEyebrow.textContent = t.contact.eyebrow;
+    }
+
+    document.querySelector('#contact .contact-title').innerHTML = `${t.contact.title} <span class="accent">${t.contact.accent}</span>`;
     document.querySelector('#contact .lead').textContent = t.contact.p;
     document.querySelector('#contact .response-note').textContent = t.contact.response;
     document.querySelector('input[name="name"]').placeholder = t.contact.name;
